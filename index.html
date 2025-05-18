@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>한강탐사 심화탐구 - 서울숲 공원 길찾기 프로그램 개선하기</title>
+    <link rel="stylesheet" href="style_landscape.css">
+    <link rel="stylesheet" href="style_portrait.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+    <div id="screen">
+        <div id="map-container">
+            <div class="title">서울숲 지도</div>
+            <div id="map"></div>
+        </div>
+        <div id="info-container">
+            <div class="title">선택한 장소/경로</div>
+            <div id="info" class="box">
+                <div id="empty">장소 또는 경로를 선택해 주세요.</div>
+                <div id="location-info">
+                    <form id="location-name-form">
+                        <span id="location-name">이름</span>
+                        <input type="button" id="name-modify-button" value="이름 변경">
+                        <input type="button" id="location-delete" value="삭제">
+                    </form>
+                    <form id="path-setting-form">
+                        <input type="button" id="set-start" value="출발 장소로 지정">
+                        <input type="button" id="set-end" value="도착 장소로 지정">
+                    </form>
+                </div>
+                <div id="location-modify">
+                    <form id="name-modify-form" autocomplete="off">
+                        <input type="text" id="name-modify-text">
+                        <input type="submit" value="완료">
+                        <input type="button" id="name-modify-cancel" value="취소">
+                    </form>
+                </div>
+                <div id="path-info">
+                    <form>
+                        <span id="path-name">출발 → 도착</span>
+                        <input type="button" id="path-delete" value="삭제">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="path-maker-container">
+            <div class="title">경로 생성</div>
+                <div id="path-maker" class="box">
+                <div>
+                    <span>출발 장소: </span>
+                    <span id="start">(출발 장소를 지정해 주세요)</span>
+                </div>
+                <div>
+                    <span>도착 장소: </span>
+                    <span id="end">(도착 장소를 지정해 주세요)</span>
+                </div>
+                <input type="button" id="path-making-button" value="경로 생성">
+            </div>
+        </div>
+        <div id="reset-container">
+            <div class="title">지도 초기화</div>
+            <div id="reset" class="box">
+                <input type="button" id="reset-path" value="모든 경로 제거">
+                <input type="button" id="reset-all" value="모든 장소/경로 제거">
+            </div>
+        </div>
+        <div id="share-container">
+            <div class="title">공유</div>
+            <div id="share" class="box">
+                <input type="button" id="share-website" value="웹사이트 링크 복사">
+                <input type="button" id="share-map" value="지도 링크 복사">
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

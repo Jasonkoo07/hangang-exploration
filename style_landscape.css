@@ -1,0 +1,105 @@
+@media (orientation: landscape) {
+    body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vh;
+    }
+
+    #screen {
+        display: grid;
+        width: 90vw;
+        height: 90vh;
+        grid-template-rows: 1.5fr 1.5fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "map info"
+        "map path-maker"
+        "map reset"
+        "map share"
+        ;
+        align-items: center;
+        justify-items: center;
+        background-color: burlywood;
+        border-radius: 10px;
+    }
+
+    #map-container {grid-area: map;}
+    #info-container {grid-area: info;}
+    #path-maker-container {grid-area: path-maker;}
+    #reset-container {grid-area: reset;}
+    #share-container {grid-area: share;}
+
+    .title {
+        font-size: 3vh;
+        font-weight: bold;
+        background-color: white;
+        width: fit-content;
+        height: 5vh;
+        line-height: 5vh;
+        padding: 0 10px;
+        margin-bottom: 5px;
+        border-radius: 7vh;
+        border: 3px solid black;
+    }
+
+    .box {
+        background-color: white;
+        width: 40vw;
+        border-radius: 5px;
+        padding: 1vh;
+    }
+
+    input {
+        height: 4vh;
+        border-radius: 5px;
+        margin: 10px;
+    }
+
+    #map {
+        width: min(40vw, 75vh);
+        height: min(40vw, 75vh);
+        border-radius: 10px;
+    }
+
+    #info {
+        height: 15vh;
+    }
+
+    #empty,#location-info,#location-modify,#path-info {
+        display: flex;
+        width: 40vw;
+        height: 15vh;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #name-modify-text {
+        width: 20vw;
+    }
+
+    #path-maker {
+        display: flex;
+        height: 15vh;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #reset {
+        display: grid;
+        height: 5vh;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #share {
+        display: grid;
+        height: 5vh;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+}

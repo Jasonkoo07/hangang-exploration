@@ -154,14 +154,14 @@ function makePath(start, end) {
 }
 
 function deleteLocation(location) {
-    for (var i = 0; i < locations.length; i++) {
+    for (let i = 0; i < locations.length; i++) {
         if (locations[i] == location) {
             locationLayer.removeLayer(currentObject.marker);
             locations.splice(i, 1);
             break;
         }
     }
-    for (var i = 0; i < paths.length; i++) {
+    for (let i = 0; i < paths.length; i++) {
         if (paths[i].start == location || paths[i].end == location) {
             deletePath(paths[i]);
             i--;
@@ -178,7 +178,7 @@ function deleteCurrentLocation() {
 }
 
 function deletePath(path) {
-    for (var i = 0; i < paths.length; i++) {
+    for (let i = 0; i < paths.length; i++) {
         if (paths[i] == path) {
             pathLayer.removeLayer(path.polyline);
             paths.splice(i, 1);
